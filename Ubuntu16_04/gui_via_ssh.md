@@ -1,12 +1,12 @@
 #How to use GUI in Ubuntu server  
 See if you need to use GUI in Ubuntu server. Remote case is associated with the use case of AWS.  
 
-Working check  
 remote case  
 - [ ] Case1: VNC-server  
 - [ ] Case2: VNC-server without xfce  
+
 directory case  
-- [ ] Case1: tasksel    
+- [ ] Case1: tasksel  
 - [ ] Case2: apt-get install ubuntu-desktop  
 
 ##VNC-server  
