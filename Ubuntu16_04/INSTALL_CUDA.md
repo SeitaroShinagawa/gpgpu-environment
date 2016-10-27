@@ -14,12 +14,6 @@
 ####1. Select suitable driver-version to your GPGPU  
 Latest is not the best. Check your GPGPU name and find the best choice from [Nvidia](http://www.nvidia.co.jp/Download/index.aspx?lang=en)  
 
-How to show your GPGPU  
-```
-lspci | grep -i nvidia
-```
-or  
-```
-sudo lshw -c display| grep product
-```
+Your GPGPU name can be seen by `lspci | grep -i nvidia` or `sudo lshw -c display| grep product`.
+
 
