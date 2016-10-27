@@ -9,7 +9,8 @@
 保存する環境(Snapshot) はdefaultでroot partitionの`/timeshift`以下に保存される  
 CDへの保存も可能。usbへの保存が可能か、また初期化されたOSから修復が可能かどうかは未確認  
 userの保存したドキュメントや画像、音声ファイルはdefaultで保存対象から除外されるので安心して復元できる  
-  
 
+```  
+sudo apt-get install software-properties-common #for using add-apt-repository  
 
-
+```
