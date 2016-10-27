@@ -2,7 +2,7 @@
 
 ##[How I do a system restore?](http://askubuntu.com/questions/56095/how-i-do-a-system-restore)  
 - [ ] Case1: TimeShift  
-- [ ] Case2: manual  
+- [ ] Case2: Manual  
 
 ###Case1: [TimeShift](http://www.teejeetech.in/p/timeshift.html)
 システム復旧に使えるライブラリ  
@@ -28,5 +28,5 @@ wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-i386.run (32-bit)
 wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-amd64.run (64-bit)
 ``` 
 
-
-
+###Case2: Manual
+Add if Case1 failed
