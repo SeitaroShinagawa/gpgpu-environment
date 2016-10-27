@@ -23,8 +23,9 @@ sudo apt-get update
 sudo apt-get install timeshift  
 ```  
 ```
-#Others including Debian  
-
+#Others(including Debian)
+wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-i386.run (32-bit)
+wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-amd64.run (64-bit)
 ``` 
 
 
