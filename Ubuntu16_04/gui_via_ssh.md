@@ -5,7 +5,7 @@ remote case
 - [ ] Case1: VNC-server  
 - [ ] Case2: VNC-server without xfce  
 
-directory case  
+direct case  
 - [ ] Case1: tasksel  
 - [ ] Case2: apt-get install ubuntu-desktop  
 
