@@ -28,5 +28,19 @@ wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-i386.run (32-bit)
 wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-amd64.run (64-bit)
 ``` 
 
+###Case1-2: [Systemback](http://gihyo.jp/admin/serial/01/ubuntu-recipe/0402)  
+
 ###Case2: Manual
-Add if Case1 failed
+Add if Case1 failed  
+
+###Case3: Simple Backup(SBackup)  
+file backup  
+save package list    
+[[link](http://gihyo.jp/admin/serial/01/ubuntu-recipe/0004?page=3)]  
+
+###Case4: dd
+save full HDD image  
+
+###Case5: Deja Dup
+
+
