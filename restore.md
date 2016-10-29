@@ -28,8 +28,23 @@ wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-i386.run (32-bit)
 wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-amd64.run (64-bit)
 ``` 
 
-###Case1-2: [Systemback](http://gihyo.jp/admin/serial/01/ubuntu-recipe/0402)  
+###Case1-2: Systemback
+[intro-ja](http://gihyo.jp/admin/serial/01/ubuntu-recipe/0402)  
+[detail-en](https://www.ostechnix.com/systemback-restore-ubuntu-desktop-and-server-to-previous-state/)  
+GUIでもCLIでも使える  
 
+```
+#Install
+sudo add-apt-repository -y ppa:nemh/systemback  #add-apt-repositoryがなければ↑のTimeShiftを参考に追加  
+sudo apt-get update  
+sudo apt-get install systemback  
+(CUI) sudo apt-get install systemback-cli  
+```
+```
+#Execution  
+(GUI) find & click icon of systemback  
+(CLI) sudo systemback-cli
+```
 ###Case2: Manual
 Add if Case1 failed  
 
