@@ -4,3 +4,7 @@
 - Discuss gpgpu cost and performance  
 - Quick install guide  
 - Docker usage  
+
+##libcuda.soがない問題
+[link](https://groups.google.com/forum/#!topic/chainer/oG2U2ExYTiE)  
+

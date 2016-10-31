@@ -17,17 +17,20 @@ If you use before CUDA8.0, make sure that your gcc version is under 4.9.
 - The latest is not the best. Check your GPGPU name and find the best choice from [Nvidia](http://www.nvidia.co.jp/Download/index.aspx?lang=en)  
   - Your GPGPU name can be seen by `lspci | grep -i nvidia` or `sudo lshw -c display| grep product`.  
   - e.g.)If you use TeslaK40m, Linux-64bit, you should select 367.55 for CUDA8 or 352.99 for CUDA7.5  
-  - e.g.)If you use GeForce xxxxx Series GTX TITAN, Linux-64bit, you should select xxx.xx for CUDA8 or xxx.xx for CUDA7.5(add later...)  
+  - e.g.)If you use GeForce GTX TITAN X(900 Series), Linux-64bit, you should select 367.57 for CUDA8 or CUDA7.5  
 
 ####2. Install
 *Caution!!*  Don't install driver before installing CUDA. Otherwise, your system may be broken.(cause login loop, destroy dependencies, etc.)  
 *Caution!!*  Keep your Nvidia-driver. it is necessary for fixing when something wrong happens.  
 ```
-sudo chmod 755 NVIDIA-Linux-x86_64-xxx.xx.run
-sudo ./NVIDIA-Linux-x86_64-xxx.xx.run -Z
+#wGUI means your Ubuntu is Ubuntu desktop or Ubuntu server which already installed ubuntu-desktop  
+(wGUI)sudo service lightdm stop  or  sudo stop lightdm  #stop Xserver
+(wGUI)sudo init 3                                       #run level stopping X server(Just in case)
+sudo chmod 755 NVIDIA-Linux-x86_64-xxx.xx.run           #Nvidia-driver to be exectable  
+sudo ./NVIDIA-Linux-x86_64-xxx.xx.run -Z                #-Z: disable noveau
+(wGUI)sudo reboot  or  sudo service lightdm start  or  sudo start lightdm  #start your X server
 ```
--Z option is to disable nouveau.  
-You can see other options by `--help` or `-A`(show advanced option)  
+You can see other options by `NVIDIA-Linux-x86_64-xxx.xx.run --help` or `NVIDIA-Linux-x86_64-xxx.xx.run -A`(show advanced option)  
 
 Check the driver and cuda work correctly.  
 ```
