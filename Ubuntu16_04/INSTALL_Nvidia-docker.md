@@ -28,6 +28,66 @@
 2. Install Docker  
 3. Install Nvidia-docker  
 
+###2. Docker Installation  
+```
+#check linux kernel (>3.10)
+uname -r
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' > /etc/apt/sources.list.d/docker.list  
+sudo apt-get update
+```
+```
+#Check docker engine
+apt-cache policy docker-engine
+docker-engine:
+  インストールされているバージョン: (なし)
+  候補:               1.12.3-0~xenial
+  バージョンテーブル:
+     1.12.3-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+     1.12.2-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+     1.12.1-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+     1.12.0-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+     1.11.2-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+     1.11.1-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+     1.11.0-0~xenial 500
+        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
+```
+```
+sudo apt-get update
+sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+```
+```
+sudo apt-get update
+sudo apt-get install docker-engine
+sudo service docker start
+sudo docker run hello-world
+```
+###3. Nvidia-docker installation
+```
+# Install nvidia-docker and nvidia-docker-plugin
+wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
+sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
+# Test nvidia-smi
+nvidia-docker run --rm nvidia/cuda nvidia-smi
+```
+####add to docker-group 
+docker-group member can use nvidia-docker without sudo unless he/she is not a member of sudoers
+```
+#create group "docker"  
+sudo groupadd docker  
+sudo usermod -aG docker <USER>  
+#check adding succeeded or not
+less /etc/group |grep docker
+```
+
 ##Usage Example  
 ```
 #cuda7.5のイメージを使いnvidia-smiを起動して閉じる  
