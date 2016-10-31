@@ -33,6 +33,8 @@ wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-amd64.run (64-bit)
 [detail-en](https://www.ostechnix.com/systemback-restore-ubuntu-desktop-and-server-to-previous-state/)  
 GUIでもCLIでも使える  
 
+CLIは簡単な設定、保存時はすべてのフォルダの内容を保存する(つまりそれだけメモリを食う)  
+外部のファイルシステムとつながっている場合、おそらく保存するときは一度アンマウントする必要がある  
 ```
 #Install
 sudo add-apt-repository -y ppa:nemh/systemback  #add-apt-repositoryがなければ↑のTimeShiftを参考に追加  
