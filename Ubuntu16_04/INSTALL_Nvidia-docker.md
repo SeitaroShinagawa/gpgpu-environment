@@ -14,14 +14,16 @@
 ##Nvidia dockerの特徴、何が出来るか
 - 最低限のgpu環境でインストール可能、Dockerなので自分用のイメージ、コンテナを作って自由に環境構築が可能  
 - 最新版のNvidia-driverとCUDAを入れておけばNvidia-docker内で好きなバージョンにダウングレードも可能  
-- コンテナ内部からGPUを呼ぶ設定が簡単にできるので手間がかからない  
-- 複数マシンでコンテナを共有できる  
+- コンテナ内部からGPUを呼ぶ設定が簡単にできるので手間がかからない(検証済み,Usageが参考例) 
+- 複数マシンでコンテナを共有できる(未検証)  
 - 設定はDockerfile内に記述することで思い通りの環境を作れる  
 
 ##注意点  
 - 非GPUマシンと混ぜるのは危険?(未検証)  
 - 通常のDockerと混ぜるのも危険?(未検証)  
-- Docker groupメンバーはsudoメンバーである必要がある可能性がある(未検証)  
+- Docker groupメンバーはsudoメンバーである必要はない(検証済み)  
+- Nvidia-dockerは使用時に指定したgpuを占有してしまう?->少なくとも共有状態でコンテナをLaunchすることはできた(指定したgpuがかぶっていてもnvidia-smiで同時に見れただけ、同時使用したときにどのようになるかは未確認)
+確認方法: ２セッションでそれぞれ`NV_GPU=0 nvidia-docker run -ti --rm nvidia/cuda`を起動
 
 ##How to Install
 1. Install CUDA,Nvidia-driver
@@ -90,6 +92,10 @@ less /etc/group |grep docker
 
 ##Usage Example  
 ```
+# Running an interactive CUDA session isolating the first GPU
+NV_GPU=0 nvidia-docker run -ti --rm nvidia/cuda
+NV_GPU=0,1 use gpu0,1
+
 #cuda7.5のイメージを使いnvidia-smiを起動して閉じる  
 nvidia-docker run -rm nvidia/cuda:7.5-devel nvidia-smi  
 ```
