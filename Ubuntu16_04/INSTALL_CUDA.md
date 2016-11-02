@@ -1,11 +1,11 @@
 #INSTALL CUDA
-[CUDA7.5]
-1. Install CUDA libraries    
+[CUDA7.5]  
+1. Install CUDA  
 2. Install Nvidia Driver  
-[CUDA8.0]
-1. Install CUDA libraries
+[CUDA8.0]  
+1. Install CUDA  
 
-[ref]:https://devtalk.nvidia.com/default/topic/955414/-solved-how-to-install-titan-x-pascal-driver-on-top-of-cuda-8-/
+[Nvidia driver installation has something wrong with CUDA8.0](https://devtalk.nvidia.com/default/topic/955414/-solved-how-to-install-titan-x-pascal-driver-on-top-of-cuda-8-/)  
 
 ##Install Nvidia Driver
 - [x] Case1: "Add driver" in Software&Update of desktop GUI (Safest but inconvenient from commandline)  
@@ -60,8 +60,8 @@ nvcc
 ```
 If you download and use CUDA deb from Nvidia, you can check by deviceQuery.  
 ```
-[CUDA7.5]cd /usr/local/cuda-7.5/bin/cuda-install-samples/NVIDIA_CUDA-7.5_Samples/1_Utilities/deviceQuery/
-[CUDA8.0]
+[CUDA7.5]cd /usr/local/cuda-7.5/bin/cuda-install-samples/NVIDIA_CUDA-7.5_Samples/1_Utilities/deviceQuery
+[CUDA8.0]cd /usr/local/cuda/samples/1_Utilities/deviceQuery
 
 make
 ./deviceQuery
