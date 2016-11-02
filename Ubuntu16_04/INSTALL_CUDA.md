@@ -3,11 +3,9 @@
 1. Install CUDA libraries    
 2. Install Nvidia Driver  
 [CUDA8.0]
-1. Install Nvidia Driver
-2. Install CUDA libraries
+1. Install CUDA libraries
 
 [ref]:https://devtalk.nvidia.com/default/topic/955414/-solved-how-to-install-titan-x-pascal-driver-on-top-of-cuda-8-/
-
 
 ##Install Nvidia Driver
 - [x] Case1: "Add driver" in Software&Update of desktop GUI (Safest but inconvenient from commandline)  
@@ -41,7 +39,8 @@ You can see other options by `NVIDIA-Linux-x86_64-xxx.xx.run --help` or `NVIDIA-
 *If you use before CUDA7.5, make sure that your gcc version is under 4.9.*  
 
 ###Case2: Download from Nvidia and use apt-get
-```  
+```
+wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local_8.0.44-1_amd64-deb
 sudo dpkg -i cuda-repo-ubuntu1604-8-0-local_8.0.44-1_amd64.deb`
 sudo apt-get update  
 sudo apt-get install cuda  
