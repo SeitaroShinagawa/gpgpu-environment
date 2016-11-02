@@ -34,7 +34,7 @@ wget http://dl.dropbox.com/u/67740416/linux/timeshift-latest-amd64.run (64-bit)
 GUIでもCLIでも使える  
 
 CLIは簡単な設定、保存時はすべてのフォルダの内容を保存する(つまりそれだけメモリを食う)  
-外部のファイルシステムとつながっている場合、おそらく保存するときは一度アンマウントする必要がある  
+外部のファイルシステムとつながっている場合、おそらく保存するときは一度アンマウントする必要がある(2016.11.02確認、外部のファイルシステムについては自動で除外してくれるので気兼ねなく使える)  
 ```
 #Install
 sudo add-apt-repository -y ppa:nemh/systemback  #add-apt-repositoryがなければ↑のTimeShiftを参考に追加  
