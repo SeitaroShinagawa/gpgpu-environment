@@ -14,3 +14,6 @@ Ubuntu serverから作成
                           x[16.04server](http://releases.ubuntu.com/16.04/)  
 2. Create USB boot loader  [UUI](http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/)  
 3. 
+
+ip固定化の方法  
+http://bonk.red/articles/Ubuntu1604/index.html
